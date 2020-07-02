@@ -43,7 +43,7 @@ The recognition model is trained for 30 epochs for `Tamil` &  `Hindi` and 40 epo
 * lr_step_size = 5
 * lr_gamma = 0.90
 
-For detailed model architecture and its parameters, check the `Define model` section of the notebook [1-CRNN-Unicode-Tamil.ipynb](../master/1-CRNN-Unicode-Tamil.ipynb)
+For detailed model architecture and its parameters, check the `Define model` section of the notebook [CRNN-Unicode-Tamil.ipynb](../master/CRNN-Unicode-Tamil.ipynb)
 
 
 # Performance
