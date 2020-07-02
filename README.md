@@ -63,7 +63,7 @@ Check the recognition accuracies for a range of maximum permitted edit distances
 ![Misclassifications](../master/Images/Misclassifications-Tamil.png) 
 
 
-**Code:** 
+# Code 
 
 * Training-Tamil: [CRNN-Unicode-Tamil.ipynb](../master/CRNN-Unicode-Tamil.ipynb)
 * Training-Hindi: [CRNN-Unicode-Hindi.ipynb](../master/CRNN-Unicode-Hindi.ipynb)
