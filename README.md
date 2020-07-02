@@ -19,12 +19,12 @@ The `Train` split of the version dataset is used for training. The recognition m
 
 
 # Model
-A Convolutional Recurrent Neural Network Model ([CRNN](https://arxiv.org/pdf/1507.05717v1.pdf)) is used to architect the reconition model for each language individually. The model uses resnet-18 as the feature extractor of images (initialised with pretrained weights on ImageNet). Then the bidirectional gated recurrent units are used to learn from the spatially sequential output of the former CNN part. Finally, a linear output layer is used to classify the character at each sequential step, taking input from the sequential faetures output of the RNN part.
+A Convolutional Recurrent Neural Network Model ([CRNN](https://arxiv.org/pdf/1507.05717v1.pdf)) is used to architect the reconition model for each language individually. The model uses resnet-18 as the feature extractor of images (initialised with pretrained weights on ImageNet). Then the bidirectional gated recurrent units are used to learn from the spatially sequential output of the former CNN part. Finally, a linear output layer is used to classify the character at each sequential step, taking input from the sequential features output of the RNN part.
 
 * Input Image Shape: [200, 50]
 * CNN Output Shape: [13, 256]
 * RNN Output Shape: [13, 512]
-* Linear Output Shape: [13, number of characters]
+* Linear Output Shape: [13, number of unicode characters]
 
 
 # Training
@@ -51,11 +51,11 @@ The models after training on the final epoch are used to evaluate the recognitio
 
 Check the recognition accuracies for a range of maximum permitted edit distances of different Indian language recognition models below:
 
-![Tamil Recognition Performance](../master/Images/Tamil-Recognition-Performance.png) 
-![Hindi Recognition Performance](../master/Images/Hindi-Recognition-Performance.png) 
-![Telugu Recognition Performance](../master/Images/Telugu-Recognition-Performance.png) 
-![Malayalam Recognition Performance](../master/Images/Malayalam-Recognition-Performance.png) 
-![Punjabi Recognition Performance](../master/Images/Punjabi-Recognition-Performance.png) 
+![Tamil Recognition Performance](../master/Images/Recognition-Performance-Tamil.png) 
+![Hindi Recognition Performance](../master/Images/Recognition-Performance-Hindi.png) 
+![Telugu Recognition Performance](../master/Images/Recognition-Performance-Telugu.png) 
+![Malayalam Recognition Performance](../master/Images/Recognition-Performance-Malayalam.png) 
+![Punjabi Recognition Performance](../master/Images/Recognition-Performance-Punjabi.png) 
 
 
 **Incorrectly recognised samples in V2-Testset of Tamil:**
