@@ -15,11 +15,11 @@ Indian Signboard Translation  involves 4 modular tasks:
 # Dataset
 
 [Indian Scene Text Recognition Dataset](https://github.com/GokulKarthik/Indian-Scene-Text-Dataset#d3-recognition-dataset) is used.
-The `Train` split of the version dataset is used for training. The recognition model is evaluated on all the splits of `D3` and the `Test` split of `D3-V2`
+The `Train` split of the version 1 dataset (`D3`) is used for training. The recognition model is evaluated on all the splits of `D3` and the `Test` split of `D3-V2`
 
 
 # Model
-A Convolutional Recurrent Neural Network Model ([CRNN](https://arxiv.org/pdf/1507.05717v1.pdf)) is used to architect the reconition model for each language individually. The model uses resnet-18 as the feature extractor of images (initialised with pretrained weights on ImageNet). Then the bidirectional gated recurrent units are used to learn from the spatially sequential output of the former CNN part. Finally, a linear output layer is used to classify the character at each sequential step, taking input from the sequential features output of the RNN part.
+A Convolutional Recurrent Neural Network Model ([CRNN](https://arxiv.org/pdf/1507.05717v1.pdf)) is used to architect the recognition model for each language individually. The model uses resnet-18 as the feature extractor of images (initialised with pretrained weights on ImageNet). Then the bidirectional gated recurrent units are used to learn from the spatially sequential output of the former CNN part. Finally, a linear output layer is used to classify the character at each sequential step, taking input from the sequential features output of the RNN part.
 
 * Input Image Shape: [200, 50]
 * CNN Output Shape: [13, 256]
