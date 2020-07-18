@@ -17,6 +17,8 @@ Indian Signboard Translation  involves 4 modular tasks:
 [Indian Scene Text Recognition Dataset](https://github.com/GokulKarthik/Indian-Scene-Text-Dataset#d3-recognition-dataset) is used.
 The `Train` split of the version 1 dataset (`D3`) is used for training. The recognition model is evaluated on all the splits of `D3` and the `Test` split of `D3-V2`
 
+`D3-English` is also used for English recognition.
+
 
 # Model
 A Convolutional Recurrent Neural Network Model ([CRNN](https://arxiv.org/pdf/1507.05717v1.pdf)) is used to architect the recognition model for each language individually. The model uses resnet-18 as the feature extractor of images (initialised with pretrained weights on ImageNet). Then the bidirectional gated recurrent units are used to learn from the spatially sequential output of the former CNN part. Finally, a linear output layer is used to classify the character at each sequential step, taking input from the sequential features output of the RNN part.
@@ -28,7 +30,7 @@ A Convolutional Recurrent Neural Network Model ([CRNN](https://arxiv.org/pdf/150
 
 
 # Training
-The recognition model is trained for 30 epochs for `Tamil` &  `Hindi` and 40 epochs for `Telugu`, `Malayalam` & `Punjabi` with the following hyperpararmeters. The model weights are saved every 10 epochs and you can find them in the [`Models`](../master/Models/) directory
+The recognition model is trained for 30 epochs for `Tamil`, `Hindi` & `Enlgish` and 40 epochs for `Telugu`, `Malayalam` & `Punjabi` with the following hyperpararmeters. The model weights are saved every 10 epochs and you can find them in the [`Models`](../master/Models/) directory
 
 **Hyperparameters: Data Loading**
 * batch_size = 64
@@ -56,11 +58,16 @@ Check the recognition accuracies for a range of maximum permitted edit distances
 ![Telugu Recognition Performance](../master/Images/Recognition-Performance-Telugu.png) 
 ![Malayalam Recognition Performance](../master/Images/Recognition-Performance-Malayalam.png) 
 ![Punjabi Recognition Performance](../master/Images/Recognition-Performance-Punjabi.png) 
+![English Recognition Performance](../master/Images/Recognition-Performance-English.png) 
 
 
 **Incorrectly recognised samples in V2-Testset of Tamil:**
 
 ![Misclassifications](../master/Images/Misclassifications-Tamil.png) 
+
+**Incorrectly recognised samples in Testset of English:**
+
+![Misclassifications](../master/Images/Misclassifications-English.png) 
 
 
 # Code 
@@ -70,12 +77,14 @@ Check the recognition accuracies for a range of maximum permitted edit distances
 * Training-Telugu: [CRNN-Unicode-Telugu.ipynb](../master/CRNN-Unicode-Telugu.ipynb)
 * Training-Malayalam: [CRNN-Unicode-Malayalam.ipynb](../master/CRNN-Unicode-Malayalam.ipynb)
 * Training-Punjabi: [CRNN-Unicode-Punjabi.ipynb](../master/CRNN-Unicode-Punjabi.ipynb)
+* Training-Punjabi: [CRNN-Unicode-English.ipynb](../master/CRNN-Unicode-English.ipynb)
 
 * Evaluation-Tamil: [Test-CRNN-Unicode-Tamil.ipynb](../master/Test-CRNN-Unicode-Tamil.ipynb)
 * Evaluation-Hindi: [Test-CRNN-Unicode-Hindi.ipynb](../master/Test-CRNN-Unicode-Hindi.ipynb)
 * Evaluation-Telugu: [Test-CRNN-Unicode-Telugu.ipynb](../master/Test-CRNN-Unicode-Telugu.ipynb)
 * Evaluation-Malayalam: [Test-CRNN-Unicode-Malayalam.ipynb](../master/Test-CRNN-Unicode-Malayalam.ipynb)
 * Evaluation-Punjabi: [Test-CRNN-Unicode-Punjabi.ipynb](../master/Test-CRNN-Unicode-Punjabi.ipynb)
+* Evaluation-Punjabi: [Test-CRNN-Unicode-English.ipynb](../master/Test-CRNN-Unicode-English.ipynb)
 
 ### Related Links:
 1. [Indian Signboard Translation Project](https://ai4bharat.org/articles/sign-board)
