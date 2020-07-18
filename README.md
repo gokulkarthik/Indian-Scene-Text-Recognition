@@ -54,10 +54,15 @@ The models after training on the final epoch are used to evaluate the recognitio
 Check the recognition accuracies for a range of maximum permitted edit distances of different Indian language recognition models below:
 
 ![Tamil Recognition Performance](../master/Images/Recognition-Performance-Tamil.png) 
+
 ![Hindi Recognition Performance](../master/Images/Recognition-Performance-Hindi.png) 
+
 ![Telugu Recognition Performance](../master/Images/Recognition-Performance-Telugu.png) 
+
 ![Malayalam Recognition Performance](../master/Images/Recognition-Performance-Malayalam.png) 
+
 ![Punjabi Recognition Performance](../master/Images/Recognition-Performance-Punjabi.png) 
+
 ![English Recognition Performance](../master/Images/Recognition-Performance-English.png) 
 
 
