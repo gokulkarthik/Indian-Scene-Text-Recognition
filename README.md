@@ -30,7 +30,7 @@ A Convolutional Recurrent Neural Network Model ([CRNN](https://arxiv.org/pdf/150
 
 
 # Training
-The recognition model is trained for 30 epochs for `Tamil`, `Hindi` & `Enlgish` and 40 epochs for `Telugu`, `Malayalam` & `Punjabi` with the following hyperpararmeters. The model weights are saved every 10 epochs and you can find them in the [`Models`](../master/Models/) directory
+The recognition model is trained for 30 epochs for `Tamil`, `Hindi` & `English` and 40 epochs for `Telugu`, `Malayalam` & `Punjabi` with the following hyperpararmeters. The model weights are saved every 10 epochs and you can find them in the [`Models`](../master/Models/) directory
 
 **Hyperparameters: Data Loading**
 * batch_size = 64
